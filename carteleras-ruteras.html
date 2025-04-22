@@ -2,135 +2,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Grupo Sodja - Carteleras Ruteras</title>
+  <meta charset="utf-8"/>
+  <title>Grupo Sodja - Carteleras</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="estilos.css"/>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  <header>
+    <img src="logo_grande.png" alt="Grupo Sodja">
+  </header>
 
-<header>
-  <img src="logo_grande.png" alt="Logo Grupo Sodja"/>
-</header>
+  <nav>
+    <a class="boton-principal" href="index.html">Inicio</a>
+    <a class="boton-principal" href="pantallas.html">Pantallas</a>
+  </nav>
 
-<nav>
-  <a class="boton-principal" href="index.html">Inicio</a>
-  <a class="boton-principal" href="pantallas.html">Pantallas</a>
-</nav>
+  <section class="video-principal">
+    <video autoplay muted playsinline controls>
+      <source src="video/video.mp4" type="video/mp4">
+      Tu navegador no soporta el video HTML5.
+    </video>
+  </section>
 
-<section class="video-principal">
-  <video autoplay muted playsinline controls>
-    <source src="video/video.mp4" type="video/mp4">
-    Tu navegador no soporta el elemento de video.
-  </video>
-</section>
+  <section class="descripcion">
+    <p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndolo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
+    <p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
+    <p><strong>División Publicidad en Vía Pública</strong></p>
+  </section>
 
-<section class="descripcion">
-  <p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndolo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
-  <p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
-  <p><strong>División Publicidad en Vía Pública</strong></p>
-</section>
+  <h2>Listado de Carteleras Ruteras</h2>
 
-<!-- 🎛 FILTROS DE ESTADO -->
-<div style="text-align: center; margin: 20px 0;">
-  <button class="boton-principal" onclick="filtrarCarteleras('disponible')">Mostrar Disponibles</button>
-  <button class="boton-principal" onclick="filtrarCarteleras('alquilada')">Mostrar Alquiladas</button>
-  <button class="boton-principal" onclick="filtrarCarteleras('todas')">Mostrar Todas</button>
-</div>
+  <section class="tabla-carteleras">
+    <table>
+      <thead>
+        <tr>
+          <th>Estado</th>
+          <th>Ubicación</th>
+          <th>Medida</th>
+          <th>Alquiler Mensual</th>
+          <th>Impresión y Colocación</th>
+          <th>Ver Más</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="disponible">
+          <td>DISPONIBLE</td>
+          <td>Ruta 11 Km 998</td>
+          <td>8x4</td>
+          <td>$185.000</td>
+          <td>$10.500</td>
+          <td><button onclick="document.getElementById('desc-1').style.display='table-row'">Ver más</button></td>
+        </tr>
+        <tr id="desc-1" style="display: none;">
+          <td colspan="6">📍 Dirección: Ruta 11 Km 998<br>🧩 Ubicación estratégica con gran visibilidad desde ambos sentidos.<br>🚗 Alta circulación vehicular.<br>🔦 Iluminación nocturna.</td>
+        </tr>
+        <tr class="alquilada">
+          <td>ALQUILADA</td>
+          <td>Ruta 11 Km 999</td>
+          <td>10x5</td>
+          <td>$275.000</td>
+          <td>$10.500</td>
+          <td><button onclick="document.getElementById('desc-2').style.display='table-row'">Ver más</button></td>
+        </tr>
+        <tr id="desc-2" style="display: none;">
+          <td colspan="6">📍 Dirección: Ruta 11 Km 999<br>📌 Acceso principal desde Santa Fe.<br>🌉 Cercanía al puente interprovincial.<br>🔦 Con iluminación.</td>
+        </tr>
+        <!-- Agregá más filas acá -->
+      </tbody>
+    </table>
+  </section>
 
-<section class="tabla-carteleras">
-  <table>
-    <thead>
-      <tr>
-        <th>Estado</th>
-        <th>Ubicación</th>
-        <th>Medida</th>
-        <th>Alquiler Mensual</th>
-        <th>Impresión y Colocación</th>
-        <th>Ver Más</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="disponible">
-        <td>DISPONIBLE</td>
-        <td>Ruta 11 Km 998</td>
-        <td>8x4</td>
-        <td>$185.000</td>
-        <td>$10.500</td>
-        <td><button onclick="document.getElementById('desc-1').style.display='table-row'">Ver más</button></td>
-      </tr>
-      <tr id="desc-1" style="display:none;">
-        <td colspan="6">
-          📍 Dirección: Ruta 11 Km 998<br>
-          🧩 Ubicación estratégica con gran visibilidad desde ambos sentidos.<br>
-          🚗 Alta circulación vehicular.<br>
-          🔦 Iluminación nocturna.
-        </td>
-      </tr>
-
-      <tr class="alquilada">
-        <td>ALQUILADA</td>
-        <td>Ruta 11 Km 999</td>
-        <td>10x5</td>
-        <td>$275.000</td>
-        <td>$10.500</td>
-        <td><button onclick="document.getElementById('desc-2').style.display='table-row'">Ver más</button></td>
-      </tr>
-      <tr id="desc-2" style="display:none;">
-        <td colspan="6">
-          📍 Dirección: Ruta 11 Km 999<br>
-          📌 Acceso principal desde Santa Fe.<br>
-          🌉 Cercanía al puente interprovincial.<br>
-          🔦 Con iluminación.
-        </td>
-      </tr>
-      <!-- Agregá más filas acá como necesites -->
-    </tbody>
-  </table>
-</section>
-
-<footer>
-  <div class="footer-content">
-    <div>
-      <h3>Sucursal - <span>Chaco</span></h3>
-      <p>📍 Nicolas R. Acosta 205, Barranqueras, Chaco</p>
-      <p>📞 011 21577000</p>
-      <p>📧 sodja.adm21@gmail.com</p>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Sucursal - <span>Chaco</span></h3>
+        <p>📍 Nicolas R. Acosta 205, Barranqueras, Chaco</p>
+        <p>📞 011 21577000</p>
+        <p>📧 sodja.adm21@gmail.com</p>
+      </div>
+      <div>
+        <h3>Sucursal - <span>Buenos Aires</span></h3>
+        <p>📞 011-21579000</p>
+        <p>📧 sodja.javier@yahoo.com.ar</p>
+      </div>
     </div>
-    <div>
-      <h3>Sucursal - <span>Buenos Aires</span></h3>
-      <p>📞 011-21579000</p>
-      <p>📧 sodja.javier@yahoo.com.ar</p>
-    </div>
+  </footer>
+
+  <div id="whatsapp-button">
+    <a href="https://wa.me/5491121577000" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
   </div>
-</footer>
-
-<div id="whatsapp-button">
-  <a href="https://wa.me/5491121577000" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"/>
-  </a>
-</div>
-
-<!-- 🧠 SCRIPT DE FILTRADO -->
-<script>
-function filtrarCarteleras(estado) {
-  const filas = document.querySelectorAll(".tabla-carteleras tbody tr");
-  filas.forEach(fila => {
-    if (fila.id && fila.id.startsWith("desc-")) {
-      fila.style.display = "none";
-      return;
-    }
-    if (estado === "todas") {
-      fila.style.display = "";
-    } else if (fila.classList.contains(estado)) {
-      fila.style.display = "";
-    } else {
-      fila.style.display = "none";
-    }
-  });
-}
-</script>
-
 </body>
 </html>
+
 
