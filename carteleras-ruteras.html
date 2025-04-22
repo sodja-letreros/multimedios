@@ -13,11 +13,22 @@
       padding: 0;
       color: #ccc;
     }
+
     h1 {
       text-align: center;
       margin-top: 30px;
       color: #ec1d81;
     }
+
+    .descripcion {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
     .boton-principal {
       background: linear-gradient(to right, #ec1d81, #a100ff);
       color: #ccc !important;
@@ -30,21 +41,36 @@
       cursor: pointer;
       transition: transform 0.2s ease;
     }
+
     .boton-principal:hover {
       transform: scale(1.05);
     }
-    .cartelera {
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+
+    table {
+      width: 90%;
+      max-width: 1100px;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.04);
     }
-    .disponible {
-      border: 2px solid #4caf50;
-      background-color: rgba(76, 175, 80, 0.1);
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #555;
+      text-align: center;
     }
-    .ocupada {
-      border: 2px solid #f44336;
-      background-color: rgba(244, 67, 54, 0.1);
+
+    th {
+      background-color: #ec1d81;
+      color: white;
+    }
+
+    tr.disponible {
+      border-left: 5px solid #4caf50;
+    }
+
+    tr.ocupada {
+      border-left: 5px solid #f44336;
     }
   </style>
 </head>
@@ -52,56 +78,83 @@
 
 <h1>Carteleras Ruteras</h1>
 
-<!-- 🔘 Botones de filtro -->
-<div style="text-align: center; margin: 30px 0;">
+<!-- Descripción -->
+<div class="descripcion">
+  <p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndolo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
+  <p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
+  <p><strong>División Publicidad en Vía Pública</strong></p>
+</div>
+
+<!-- Botones de filtro -->
+<div style="text-align: center;">
   <button class="boton-principal" onclick="filtrarCarteleras('todas')">Todas</button>
   <button class="boton-principal" onclick="filtrarCarteleras('disponible')">Disponibles</button>
   <button class="boton-principal" onclick="filtrarCarteleras('ocupada')">Ocupadas</button>
 </div>
 
-<!-- 📋 Lista de carteleras -->
-<div id="carteleras-container" style="max-width: 1000px; margin: auto; padding: 20px;">
+<!-- Tabla -->
+<table id="tabla-carteleras">
+  <thead>
+    <tr>
+      <th>Estado</th>
+      <th>Ubicación</th>
+      <th>Medida</th>
+      <th>Alquiler Mensual</th>
+      <th>Impresión y Colocación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="disponible">
+      <td>DISPONIBLE</td>
+      <td>Ruta 11 Km 998</td>
+      <td>8x4</td>
+      <td>$185.000</td>
+      <td>$10.500</td>
+    </tr>
+    <tr class="ocupada">
+      <td>ALQUILADA</td>
+      <td>Ruta 11 Km 999</td>
+      <td>10x5</td>
+      <td>$275.000</td>
+      <td>$10.500</td>
+    </tr>
+    <tr class="disponible">
+      <td>DISPONIBLE</td>
+      <td>Ruta 16 Km 174</td>
+      <td>10x5</td>
+      <td>$275.000</td>
+      <td>Consultar precio</td>
+    </tr>
+    <tr class="ocupada">
+      <td>ALQUILADA</td>
+      <td>Ruta 16 Km 5</td>
+      <td>10x5</td>
+      <td>$235.000</td>
+      <td>$10.500</td>
+    </tr>
+  </tbody>
+</table>
 
-  <div class="cartelera disponible">
-    <strong>Ruta 11 Km 998</strong><br>
-    Medida: 8x4<br>
-    Alquiler: $185.000<br>
-    Impresión y colocación: $10.500
-  </div>
-
-  <div class="cartelera ocupada">
-    <strong>Ruta 11 Km 999</strong><br>
-    Medida: 10x5<br>
-    Alquiler: $275.000<br>
-    Impresión y colocación: $10.500
-  </div>
-
-  <div class="cartelera disponible">
-    <strong>Ruta 16 Km 174</strong><br>
-    Medida: 10x5<br>
-    Alquiler: $275.000<br>
-    Impresión y colocación: Consultar precio
-  </div>
-
-  <div class="cartelera ocupada">
-    <strong>Ruta 16 Km 5</strong><br>
-    Medida: 10x5<br>
-    Alquiler: $235.000<br>
-    Impresión y colocación: $10.500
-  </div>
-
-</div>
-
-<!-- ⚙️ Script de filtrado -->
+<!-- Script -->
 <script>
-  function filtrarCarteleras(filtro) {
-    const carteleras = document.querySelectorAll('.cartelera');
-    carteleras.forEach(c => {
-      c.style.display = (filtro === 'todas' || c.classList.contains(filtro)) ? 'block' : 'none';
-    });
-  }
+function filtrarCarteleras(filtro) {
+  const filas = document.querySelectorAll("#tabla-carteleras tbody tr");
+  filas.forEach(fila => {
+    const esDisponible = fila.classList.contains("disponible");
+    const esOcupada = fila.classList.contains("ocupada");
+
+    if (filtro === "todas") {
+      fila.style.display = "";
+    } else if (filtro === "disponible" && esDisponible) {
+      fila.style.display = "";
+    } else if (filtro === "ocupada" && esOcupada) {
+      fila.style.display = "";
+    } else {
+      fila.style.display = "none";
+    }
+  });
+}
 </script>
 
 </body>
 </html>
-
