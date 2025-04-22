@@ -1,100 +1,618 @@
 
-
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <title>Grupo Sodja - Carteleras</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="estilos.css">
+<meta charset="utf-8"/>
+<title>Carteleras Ruteras - Grupo Sodja</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(180deg, #140232, #3a0142); 
+        margin: 0;
+        padding: 0;
+        color: #f0f0f0;
+    }
+    header {
+        background: linear-gradient(90deg, #ec1d81, #1e1a47);
+        padding: 30px 20px;
+        text-align: center;
+        color: white;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+    section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    h2 {
+        color: #ec1d81;
+        font-size: 24px;
+        border-bottom: 2px solid #ec1d81;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    ul {
+        line-height: 1.8;
+        padding-left: 20px;
+    }
+    .footer {
+        text-align: center;
+        background: #1e1a47;
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+    }
+    .pricing-table table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .pricing-table thead {
+        background-color: #ec1d81;
+        color: white;
+    }
+    .pricing-table th, .pricing-table td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #555;
+    }
+    .pricing-table tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+    .ubicaciones-grid img {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    </style>
+<link href="estilos.css" rel="stylesheet"/>
+<style>
+/* Estilo para botones */
+.boton-principal {
+    background: linear-gradient(to right, #ec1d81, #a100ff);
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.boton-principal:hover {
+    transform: scale(1.05);
+}
+
+/* Ocultar marca de agua de InShot si es posible por overlay */
+.video-overlay {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    background: rgba(44, 0, 66, 0.9);
+    padding: 6px 10px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+/* Footer estilizado */
+footer {
+    background-color: #1a001f;
+    color: #eee;
+    padding: 40px 20px;
+    font-size: 14px;
+    border-top: 2px solid #ec1d81;
+}
+footer h3 {
+    color: #ec1d81;
+}
+</style>
 </head>
-<body>
-  <header>
-    <img src="logo_grande.png" alt="Grupo Sodja">
-  </header>
-
-  <nav>
-    <a class="boton-principal" href="index.html">Inicio</a>
-    <a class="boton-principal" href="pantallas.html">Pantallas</a>
-  </nav>
-
-  <section class="video-principal">
-    <video autoplay muted playsinline controls>
-      <source src="video/video.mp4" type="video/mp4">
-      Tu navegador no soporta el video HTML5.
-    </video>
-  </section>
-
-  <section class="descripcion">
-    <p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndolo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
-    <p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
-    <p><strong>División Publicidad en Vía Pública</strong></p>
-  </section>
-
-  <h2>Listado de Carteleras Ruteras</h2>
-
-  <section class="tabla-carteleras">
-    <table>
-      <thead>
-        <tr>
-          <th>Estado</th>
-          <th>Ubicación</th>
-          <th>Medida</th>
-          <th>Alquiler Mensual</th>
-          <th>Impresión y Colocación</th>
-          <th>Ver Más</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="disponible">
-          <td>DISPONIBLE</td>
-          <td>Ruta 11 Km 998</td>
-          <td>8x4</td>
-          <td>$185.000</td>
-          <td>$10.500</td>
-          <td><button onclick="document.getElementById('desc-1').style.display='table-row'">Ver más</button></td>
-        </tr>
-        <tr id="desc-1" style="display: none;">
-          <td colspan="6">📍 Dirección: Ruta 11 Km 998<br>🧩 Ubicación estratégica con gran visibilidad desde ambos sentidos.<br>🚗 Alta circulación vehicular.<br>🔦 Iluminación nocturna.</td>
-        </tr>
-        <tr class="alquilada">
-          <td>ALQUILADA</td>
-          <td>Ruta 11 Km 999</td>
-          <td>10x5</td>
-          <td>$275.000</td>
-          <td>$10.500</td>
-          <td><button onclick="document.getElementById('desc-2').style.display='table-row'">Ver más</button></td>
-        </tr>
-        <tr id="desc-2" style="display: none;">
-          <td colspan="6">📍 Dirección: Ruta 11 Km 999<br>📌 Acceso principal desde Santa Fe.<br>🌉 Cercanía al puente interprovincial.<br>🔦 Con iluminación.</td>
-        </tr>
-        <!-- Agregá más filas acá -->
-      </tbody>
-    </table>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <div>
-        <h3>Sucursal - <span>Chaco</span></h3>
-        <p>📍 Nicolas R. Acosta 205, Barranqueras, Chaco</p>
-        <p>📞 011 21577000</p>
-        <p>📧 sodja.adm21@gmail.com</p>
-      </div>
-      <div>
-        <h3>Sucursal - <span>Buenos Aires</span></h3>
-        <p>📞 011-21579000</p>
-        <p>📧 sodja.javier@yahoo.com.ar</p>
-      </div>
+<body class="fondo-pantalla">
+<header>
+<h1>Carteleras Ruteras</h1>
+</header>
+<section>
+<h2>Descripción de Carteleras Ruteras</h2>
+<p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
+<p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
+<p><strong>División Publicidad en Vía Pública</strong></p>
+<h3>DESTACAMOS LA CIRCULACIÓN AUTOMOTOR:</h3>
+<p>La Ruta Nacional 11 la comunica con Buenos Aires y con la ciudad de Formosa.</p>
+<p>La Ruta Nacional 16 la enlaza con la región más importante del interior provincial, luego llega hasta la ciudad de Salta, y también forma parte de un corredor bioceánico de Brasil a Chile.</p>
+<p>La misma ruta llega hasta la cabecera del puente General Manuel Belgrano, que une a las provincias del Chaco y Corrientes, y desde allí mediante la Ruta Nacional 12 se vincula al resto de la región nordeste.</p>
+<p>El sector de esta ruta entre las intersecciones con la ruta Nacional Nº 11 y la ruta Provincial Nº 63 convertido en autovía, (concluido el tramo entre la Ruta 63 y la avenida Sarmiento); se destaca por la importancia del flujo automovilístico, convirtiendo todo ese corredor en una gran oportunidad de posicionamiento comunicacional.</p>
+</section>
+<section>
+<p>Bienvenido a la sección de Carteleras Ruteras de Grupo Sodja. Próximamente, encontrarás toda la información sobre nuestras ubicaciones estratégicas y tarifas.</p>
+</section>
+<section>
+<h2>Valores y Contratación</h2>
+<ul style="line-height: 1.8;">
+<li>Contrato por 6 y 12 meses.</li>
+<li>Formas de pago: efectivo, transferencia.</li>
+<li>Incrementos trimestrales según IPC.</li>
+<li>Pago con cheque a 30 y 60 días con entrega anticipada del 100% del valor del contrato, IPC bonificado.</li>
+<li><strong>*</strong> Los valores de alquiler no incluyen impresión y colocación (consultar precio y financiación).</li>
+</ul>
+</section>
+<style>
+.carteleras-img {
+    text-align: center;
+    margin-top: 20px;
+}
+.carteleras-img img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+</style>
+<style>
+.tabla-carteleras table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.05);
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.tabla-carteleras th {
+    background-color: #ec1d81;
+    color: white;
+    padding: 12px;
+}
+.tabla-carteleras td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: center;
+}
+tr.disponible {
+    background-color: rgba(236, 29, 129, 0.15);
+}
+tr.alquilada {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+</style>
+<style>
+.tabla-carteleras table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.05);
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.tabla-carteleras th {
+    background-color: #ec1d81;
+    color: white;
+    padding: 12px;
+}
+.tabla-carteleras td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: center;
+}
+tr.disponible {
+    background-color: rgba(236, 29, 129, 0.15); /* rosado claro */
+}
+tr.alquilada {
+    background-color: rgba(255, 255, 255, 0.08); /* gris suave */
+}
+</style>
+<script>
+function toggleDescripcion(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "table-row") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "table-row";
+    }
+}
+</script>
+<section>
+<h2>Listado de Carteleras Ruteras</h2>
+<div class="tabla-carteleras">
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Ubicación</th>
+<th>Medida</th>
+<th>Alquiler Mensual</th>
+<th>Impresión de Imagen y Colocación *</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Av.9 DE JULIO Y CODUTTI</td>
+<td>4X5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-0')">Ver más</button></td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Av Sarmiento 1600 (Sarmiento y Rissione) - Back Light -</td>
+<td>4X6</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-1')">Ver más</button></td>
+</tr>
+<tr id="desc-1" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BNZdqnYaXvNpbk7JA" style="color:#ec1d81;" target="_blank">Ingreso a Resistencia por Av. Sarmiento 1600</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/>
+                - Con iluminación.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en el acceso principal a la ciudad de Resistencia, Chaco, donde se desarrollan actividades recreativas, como correr y andar en bici constantemente; camino hacia los boliches, es un lugar donde se reúnen un gran número de personas todos los fines de semana.<br/><br/>
+                Es la salida principal hacia la ciudad de Corrientes, conecta con el único Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
+                La ciudad de Resistencia es destacada por ser llamada la Ciudad de las Esculturas, en la cual en la misma todos los años se realiza la Bienal de las esculturas, en el cual acuden miles de personas de todo el país y países limítrofes, la cual la convierte en un Museo a Cielo Abierto.
+            </td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Av Sarmiento 1600 (Sarmiento y Rissione) front - (DERECHA)</td>
+<td>9X4</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-2')">Ver más</button></td>
+</tr>
+<tr id="desc-2" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/8KmScJVhxzTaNRX56" style="color:#ec1d81;" target="_blank">Ingreso a Resistencia por Av. Sarmiento 1600</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/>
+                - Con iluminación.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en el acceso principal a la ciudad de Resistencia, Chaco, donde se desarrollan actividades recreativas, como correr y andar en bici constantemente; camino hacia los boliches, es un lugar donde se reúnen un gran número de personas todos los fines de semana.<br/><br/>
+                Es la salida principal hacia la ciudad de Corrientes, conecta con el único Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
+                La ciudad de Resistencia es destacada por ser llamada la Ciudad de las Esculturas, en la cual en la misma todos los años se realiza la Bienal de las esculturas, en el cual acuden miles de personas de todo el país y países limítrofes, la cual la convierte en un Museo a Cielo Abierto.
+            </td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta N° 95 - Acceso Principal Tres Isletas</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-3')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional N° 89 Km 244 - Charata</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-4')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional N° 89 Km 246,5 - Charata</td>
+<td>8x4</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-5')">Ver más</button></td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Ruta Nacional N° 89 Km 246,5 -</td>
+<td>Charata</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-6')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 11 Km 998</td>
+<td>8x4</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-7')">Ver más</button></td>
+</tr>
+<tr id="desc-9" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 8 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BweoWGK7BM3Atgj2A" style="color:#ec1d81;" target="_blank">
+                Ruta Nac. 11. Km 999</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/>
+                - Con iluminación.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Ruta Nac. 11, acceso principal desde Santa Fe, ubicado en forma estratégica de la ciudad de Resistencia, Chaco.<br/><br/>
+                Así también circunvalación que une con la ruta de Formosa y el norte del país como Salta, Tucumán, etc.<br/>
+                Característico por su afluencia del turismo, comunica con el países vecinos como Paraguay y Brasil.
+            </td>
+</tr>
+<tr id="desc-8" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 8 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BweoWGK7BM3Atgj2A" style="color:#ec1d81;" target="_blank">
+                Ruta Nac. 11. Km 999</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/>
+                - Con iluminación.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Ruta Nac. 11, acceso principal desde Santa Fe, ubicado en forma estratégica de la ciudad de Resistencia, Chaco.<br/><br/>
+                Así también circunvalación que une con la ruta de Formosa y el norte del país como Salta, Tucumán, etc.<br/>
+                Característico por su afluencia del turismo, comunica con el países vecinos como Paraguay y Brasil.
+            </td>
+</tr>
+<tr id="desc-7" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 8 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BweoWGK7BM3Atgj2A" style="color:#ec1d81;" target="_blank">
+                Ruta Nac. 11. Km 999</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/>
+                - Con iluminación.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Ruta Nac. 11, acceso principal desde Santa Fe, ubicado en forma estratégica de la ciudad de Resistencia, Chaco.<br/><br/>
+                Así también circunvalación que une con la ruta de Formosa y el norte del país como Salta, Tucumán, etc.<br/>
+                Característico por su afluencia del turismo, comunica con el países vecinos como Paraguay y Brasil.
+            </td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 11 Km 998</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-8')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 11 Km 998</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-9')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 11 Km 1014 -Rcia</td>
+<td>8x4</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-10')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 11 Km 1014</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-11')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 11 Km 1014 - Rcia</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-12')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 11 Km 1020 (Colonia benitez)</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-13')">Ver más</button></td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Ruta Nacional Nro. 16 Km 5 - Rcia</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-14')">Ver más</button></td>
+</tr>
+<tr id="desc-18" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
+                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
+                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
+                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
+            </td>
+</tr>
+<tr id="desc-16" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
+                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
+                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
+                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
+            </td>
+</tr>
+<tr id="desc-15" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
+                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
+                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
+                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
+            </td>
+</tr>
+<tr id="desc-14" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
+                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
+                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
+                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
+            </td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Ruta Nacional Nro. 16 Km 5 - Rcia</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-15')">Ver más</button></td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Ruta Nacional Nro. 16 Km 5 -</td>
+<td>Rcia</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-16')">Ver más</button></td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Ruta Nacional Nro. 16 Km 5-</td>
+<td>Rcia</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-17')">Ver más</button></td>
+</tr>
+<tr id="desc-17" style="display:none;">
+<td colspan="6" style="text-align:left; background-color:#2a0030;">
+<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
+<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
+                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
+<strong>🧩 Características:</strong><br/>
+                - Ubicación estratégica.<br/>
+                - Insuperable relación costo-beneficio.<br/>
+                - Excelente difusión de su imagen.<br/><br/>
+<strong>ℹ️ Información:</strong><br/>
+                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
+                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
+                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
+            </td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Ruta Nacional Nro. 16 Km 5 - Rcia</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-18')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 16 Km 7 - Rcia</td>
+<td>20x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-19')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 16 Km 174 - Saenz Peña</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-20')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 16 Km 174 - Saenz Peña</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-21')">Ver más</button></td>
+</tr>
+<tr class="alquilada">
+<td>ALQUILADA</td>
+<td>Ruta Nacional Nro. 16 Km 18 - Rcia</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-22')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta Nacional Nro. 16 Km 18 - Rcia</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500,00</td>
+<td><button onclick="toggleDescripcion('desc-23')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Posadas-Misiones - RN 12 Km 1301</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-24')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>Ruta 16 km 9 - Rcia</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>10.500</td>
+<td><button onclick="toggleDescripcion('desc-25')">Ver más</button></td>
+</tr>
+<tr class="disponible">
+<td>DISPONIBLE</td>
+<td>RN 12 Km 1037 (Mano izquierda)- Ctes</td>
+<td>10x5</td>
+<td>Consultar precio</td>
+<td>Consultar precio</td>
+<td><button onclick="toggleDescripcion('desc-26')">Ver más</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="footer">
+        Grupo Sodja © 2025
     </div>
-  </footer>
-
-  <div id="whatsapp-button">
-    <a href="https://wa.me/5491121577000" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
-  </div>
 </body>
 </html>
-
-
