@@ -1,987 +1,181 @@
 
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<title>Carteleras Ruteras - Grupo Sodja</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet"/>
-<style>
-        
+  <meta charset="UTF-8">
+  <title>Carteleras Ruteras</title>
+  <style>
     body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(180deg, #140232, #3a0142); 
-        margin: 0;
-        padding: 0;
-        color: #f0f0f0;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #3a0142, #140232);
+      color: #fff;
     }
+
     header {
-        background: linear-gradient(90deg, #ec1d81, #1e1a47);
-        padding: 30px 20px;
-        text-align: center;
-        color: white;
+      background: linear-gradient(90deg, #ec1d81, #6104b0);
+      padding: 40px 0;
+      text-align: center;
     }
+
     header h1 {
-        margin: 0;
-        font-size: 32px;
+      margin: 0;
+      font-size: 36px;
     }
+
     section {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 0 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
+
     h2 {
-        color: #ec1d81;
-        font-size: 24px;
-        border-bottom: 2px solid #ec1d81;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
+      margin-top: 0;
+      color: #ff69b4;
     }
-    ul {
-        line-height: 1.8;
-        padding-left: 20px;
+
+    select {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-left: 10px;
+      font-size: 16px;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    thead {
+      background-color: #ec1d81;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.07);
+    }
+
+    .ver-mas {
+      background-color: #ec1d81;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .descripcion {
+      display: none;
+      background-color: #2a0030;
+      padding: 15px;
+      text-align: left;
+    }
+
     .footer {
-        text-align: center;
-        background: #1e1a47;
-        color: white;
-        padding: 20px;
-        margin-top: 40px;
+      text-align: center;
+      background-color: #1e1a47;
+      color: #ccc;
+      padding: 20px;
+      margin-top: 40px;
     }
-    .pricing-table table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        background: rgba(255, 255, 255, 0.05);
-        color: #ffffff;
-        box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    .pricing-table thead {
-        background-color: #ec1d81;
-        color: white;
-    }
-    .pricing-table th, .pricing-table td {
-        padding: 15px;
-        text-align: center;
-        border: 1px solid #555;
-    }
-    .pricing-table tr:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.08);
-    }
-    .ubicaciones-grid img {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    }
-
-    </style>
-<link href="estilos.css" rel="stylesheet"/>
-<style>
-/* Estilo para botones */
-.boton-principal {
-    background: linear-gradient(to right, #ec1d81, #a100ff);
-    color: white;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-.boton-principal:hover {
-    transform: scale(1.05);
-}
-
-/* Ocultar marca de agua de InShot si es posible por overlay */
-.video-overlay {
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-    background: rgba(44, 0, 66, 0.9);
-    padding: 6px 10px;
-    color: white;
-    font-size: 12px;
-    border-radius: 4px;
-    z-index: 10;
-}
-
-/* Footer estilizado */
-footer {
-    background-color: #1a001f;
-    color: #eee;
-    padding: 40px 20px;
-    font-size: 14px;
-    border-top: 2px solid #ec1d81;
-}
-footer h3 {
-    color: #ec1d81;
-}
-</style>
+  </style>
 </head>
-<body class="fondo-pantalla">
-<header>
-<h1>Carteleras Ruteras</h1>
-</header>
-<section>
-<h2>Descripción de Carteleras Ruteras</h2>
-<p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
-<p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
-<p><strong>División Publicidad en Vía Pública</strong></p>
-<h3>DESTACAMOS LA CIRCULACIÓN AUTOMOTOR:</h3>
-<p>La Ruta Nacional 11 la comunica con Buenos Aires y con la ciudad de Formosa.</p>
-<p>La Ruta Nacional 16 la enlaza con la región más importante del interior provincial, luego llega hasta la ciudad de Salta, y también forma parte de un corredor bioceánico de Brasil a Chile.</p>
-<p>La misma ruta llega hasta la cabecera del puente General Manuel Belgrano, que une a las provincias del Chaco y Corrientes, y desde allí mediante la Ruta Nacional 12 se vincula al resto de la región nordeste.</p>
-<p>El sector de esta ruta entre las intersecciones con la ruta Nacional Nº 11 y la ruta Provincial Nº 63 convertido en autovía, (concluido el tramo entre la Ruta 63 y la avenida Sarmiento); se destaca por la importancia del flujo automovilístico, convirtiendo todo ese corredor en una gran oportunidad de posicionamiento comunicacional.</p>
-</section>
-<section>
-<p>Bienvenido a la sección de Carteleras Ruteras de Grupo Sodja. Próximamente, encontrarás toda la información sobre nuestras ubicaciones estratégicas y tarifas.</p>
-</section>
-<section>
-<h2>Valores y Contratación</h2>
-<ul style="line-height: 1.8;">
-<li>Contrato por 6 y 12 meses.</li>
-<li>Formas de pago: efectivo, transferencia.</li>
-<li>Incrementos trimestrales según IPC.</li>
-<li>Pago con cheque a 30 y 60 días con entrega anticipada del 100% del valor del contrato, IPC bonificado.</li>
-<li><strong>*</strong> Los valores de alquiler no incluyen impresión y colocación (consultar precio y financiación).</li>
-</ul>
-</section>
-<style>
-.carteleras-img {
-    text-align: center;
-    margin-top: 20px;
-}
-.carteleras-img img {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-</style>
-<style>
-.tabla-carteleras table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: rgba(255,255,255,0.05);
-    color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.tabla-carteleras th {
-    background-color: #ec1d81;
-    color: white;
-    padding: 12px;
-}
-.tabla-carteleras td {
-    padding: 10px;
-    border: 1px solid #555;
-    text-align: center;
-}
-tr.disponible {
-    background-color: rgba(236, 29, 129, 0.15);
-}
-tr.alquilada {
-    background-color: rgba(255, 255, 255, 0.08);
-}
-</style>
-<style>
-.tabla-carteleras table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: rgba(255,255,255,0.05);
-    color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.tabla-carteleras th {
-    background-color: #ec1d81;
-    color: white;
-    padding: 12px;
-}
-.tabla-carteleras td {
-    padding: 10px;
-    border: 1px solid #555;
-    text-align: center;
-}
-tr.disponible {
-    background-color: rgba(236, 29, 129, 0.15); /* rosado claro */
-}
-tr.alquilada {
-    background-color: rgba(255, 255, 255, 0.08); /* gris suave */
-}
-</style>
-<script>
-function toggleDescripcion(id) {
-    var x = document.getElementById(id);
-    if (x.style.display === "table-row") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "table-row";
+<body>
+  <header>
+    <h1>Carteleras Ruteras</h1>
+  </header>
+
+  <section>
+    <h2>Listado de Carteleras Ruteras</h2>
+    <label for="filtro">Filtrar por estado:</label>
+    <select id="filtro" onchange="filtrarCarteleras()">
+      <option value="todas">Ver todas</option>
+      <option value="DISPONIBLE">Disponibles</option>
+      <option value="ALQUILADA">Alquiladas</option>
+    </select>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Estado</th>
+          <th>Ubicación</th>
+          <th>Medida</th>
+          <th>Alquiler Mensual</th>
+          <th>Impresión y Colocación</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-carteleras">
+        <!-- Datos inyectados por JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <div class="footer">Grupo Sodja © 2025</div>
+
+  <script>
+    const carteleras = [
+      {
+        estado: "DISPONIBLE",
+        ubicacion: "Ruta 11 Km 998",
+        medida: "10x5",
+        alquiler: "$185.000",
+        impresion: "$10.500",
+        descripcion: "Cartelera ubicada sobre Ruta 11 con excelente visibilidad. Acceso directo a Resistencia, alto tránsito."
+      },
+      {
+        estado: "ALQUILADA",
+        ubicacion: "Av. 9 de Julio y Coduti",
+        medida: "10x5",
+        alquiler: "$200.000",
+        impresion: "$11.000",
+        descripcion: "Ubicación en intersección céntrica de Resistencia. Ideal para alto impacto visual."
+      }
+    ];
+
+    function renderizarTabla(data) {
+      const tabla = document.getElementById("tabla-carteleras");
+      tabla.innerHTML = "";
+
+      data.forEach((cartelera, index) => {
+        tabla.innerHTML += `
+          <tr>
+            <td>${cartelera.estado}</td>
+            <td>${cartelera.ubicacion}</td>
+            <td>${cartelera.medida}</td>
+            <td>${cartelera.alquiler}</td>
+            <td>${cartelera.impresion}</td>
+            <td><button class="ver-mas" onclick="toggleDescripcion(${index})">Ver más</button></td>
+          </tr>
+          <tr class="descripcion" id="desc-${index}">
+            <td colspan="6">${cartelera.descripcion}</td>
+          </tr>
+        `;
+      });
     }
-}
-</script>
-<section>
-<h2>Listado de Carteleras Ruteras</h2>
-<div class="tabla-carteleras">
-<table>
-<thead>
-<tr>
-<th>Estado</th>
-<th>Ubicación</th>
-<th>Medida</th>
-<th>Alquiler Mensual</th>
-<th>Impresión de Imagen y Colocación *</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Av.9 DE JULIO Y CODUTTI</td>
-<td>4X5</td>
-<td>$185.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-0')">Ver más</button></td>
-</tr><tr id="desc-0" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/YqF3s8vzZhdgvLWy5" style="color:#ec1d81;" target="_blank">
-      Av. 9 de Julio y Coduti, Resistencia, Chaco
-    </a><br/><br/>
 
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación en intersección de alto tránsito.<br/>
-    - Excelente visibilidad desde múltiples ángulos.<br/>
-    - Ideal para campañas de gran impacto.<br/><br/>
+    function filtrarCarteleras() {
+      const filtro = document.getElementById("filtro").value;
+      const resultado = filtro === "todas"
+        ? carteleras
+        : carteleras.filter(c => c.estado === filtro);
+      renderizarTabla(resultado);
+    }
 
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra ubicada sobre la Avenida 9 de Julio, esquina Coduti,
-    una intersección estratégica con alto flujo vehicular y peatonal.<br/><br/>
-    La Avenida 9 de Julio es la arteria principal que conecta las ciudades de Resistencia y Barranqueras,
-    lo que garantiza una exposición constante a miles de personas que circulan diariamente por esta vía.<br/><br/>
-    La zona cuenta con cercanía a centros educativos, comercios y organismos públicos, haciendo de esta cartelera una excelente opción
-    para campañas con alto alcance e impacto visual.
-  </td>
-</tr>
+    function toggleDescripcion(index) {
+      const fila = document.getElementById(`desc-${index}`);
+      fila.style.display = fila.style.display === "table-row" ? "none" : "table-row";
+    }
 
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Av Sarmiento 1600 (Sarmiento y Rissione) - Back Light -</td>
-<td>4X6</td>
-<td>438.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-1')">Ver más</button></td>
-</tr>
-<tr id="desc-1" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BNZdqnYaXvNpbk7JA" style="color:#ec1d81;" target="_blank">Ingreso a Resistencia por Av. Sarmiento 1600</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/>
-                - Con iluminación.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en el acceso principal a la ciudad de Resistencia, Chaco, donde se desarrollan actividades recreativas, como correr y andar en bici constantemente; camino hacia los boliches, es un lugar donde se reúnen un gran número de personas todos los fines de semana.<br/><br/>
-                Es la salida principal hacia la ciudad de Corrientes, conecta con el único Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
-                La ciudad de Resistencia es destacada por ser llamada la Ciudad de las Esculturas, en la cual en la misma todos los años se realiza la Bienal de las esculturas, en el cual acuden miles de personas de todo el país y países limítrofes, la cual la convierte en un Museo a Cielo Abierto.
-            </td>
-</tr>
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Av Sarmiento 1600 (Sarmiento y Rissione) front - (DERECHA)</td>
-<td>9X4</td>
-<td>$350.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-2')">Ver más</button></td>
-</tr>
-<tr id="desc-2" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/8KmScJVhxzTaNRX56" style="color:#ec1d81;" target="_blank">Ingreso a Resistencia por Av. Sarmiento 1600</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/>
-                - Con iluminación.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en el acceso principal a la ciudad de Resistencia, Chaco, donde se desarrollan actividades recreativas, como correr y andar en bici constantemente; camino hacia los boliches, es un lugar donde se reúnen un gran número de personas todos los fines de semana.<br/><br/>
-                Es la salida principal hacia la ciudad de Corrientes, conecta con el único Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
-                La ciudad de Resistencia es destacada por ser llamada la Ciudad de las Esculturas, en la cual en la misma todos los años se realiza la Bienal de las esculturas, en el cual acuden miles de personas de todo el país y países limítrofes, la cual la convierte en un Museo a Cielo Abierto.
-            </td>
-</tr>
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta N° 95 - Acceso Principal Tres Isletas</td>
-<td>10x5</td>
-<td>$275.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-3')">Ver más</button></td>
-<tr id="desc-3" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/orZbXNtZhqZhKcb48" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional Nº 95, acceso a Tres Isletas, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación en corredor vial de alto tránsito regional.<br/>
-    - Paso obligado hacia el norte provincial.<br/>
-    - Excelente visibilidad en acceso directo a la ciudad.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra ubicada sobre la Ruta Nacional 95, en el acceso a la localidad de Tres Isletas,
-    una ciudad clave del interior chaqueño con importante movimiento comercial y social.<br/><br/>
-    Es un punto estratégico de paso hacia localidades del norte provincial y zonas rurales,
-    con tránsito constante de vehículos particulares, transporte de carga y servicios.<br/><br/>
-    Perfecta para campañas de posicionamiento regional en una zona de ingreso muy visible para quienes llegan o salen de la ciudad.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional N° 89 Km 244 - Charata</td>
-<td>10x5</td>
-<td>$275.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-4')">Ver más</button></td>
-<tr id="desc-4" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/ggWkY1LP9VVtUefp9" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 89, Km 244 – Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Cartelera ubicada sobre ruta nacional de alto tránsito.<br/>
-    - Excelente visibilidad desde ambos sentidos de circulación.<br/>
-    - Tránsito mixto: transporte pesado, autos particulares y vehículos rurales.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra estratégicamente emplazada sobre la Ruta Nacional N° 89, en el kilómetro 244,
-    un tramo con fuerte circulación diaria tanto de tránsito interurbano como de transporte productivo.<br/><br/>
-    Es un punto ideal para campañas con enfoque regional o dirigidas al sector agroindustrial,
-    ya que conecta diversas localidades rurales del sudoeste chaqueño con centros urbanos más grandes.<br/><br/>
-    Gran visibilidad y alto impacto para promocionar marcas, productos o servicios destinados al público del interior chaqueño.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional N° 89 Km 246,5 - Charata</td>
-<td>8x4</td>
-<td>$235.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-5')">Ver más</button></td>
-<<tr id="desc-5" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/AgZtdqXKGoVLhsdX8" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 89, Km 246,5 – Charata, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Cartelera ubicada sobre ruta nacional de alto tránsito.<br/>
-    - Excelente visibilidad desde ambos sentidos de circulación.<br/>
-    - Tránsito mixto: transporte pesado, autos particulares y vehículos rurales.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra sobre la Ruta Nacional N° 89, en el kilómetro 246,5, en las inmediaciones de la ciudad de Charata,
-    uno de los polos agroindustriales más importantes del sudoeste chaqueño.<br/><br/>
-    La ubicación es estratégica para llegar tanto a productores como a transportistas y viajeros que ingresan o egresan de la ciudad.<br/><br/>
-    Es ideal para campañas enfocadas en el sector productivo, con una visibilidad constante en una zona clave para el movimiento comercial y rural del interior provincial.
-  </td>
-</tr>
-
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Ruta Nacional N° 89 Km 246,5 -</td>
-<td>10X5</td>
-<td>$275.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-6')">Ver más</button></td>
-<tr id="desc-6" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/34GEMm356Jbas8hK7" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 89, Km 246,5 – Charata, Chaco
-    </a><br/><br/>
-
-    <strong>📏 Medidas:</strong> 10x5 mts<br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación sobre ruta nacional clave del sudoeste chaqueño.<br/>
-    - Gran visibilidad en ambos sentidos.<br/>
-    - Tránsito constante de vehículos particulares, maquinaria agrícola y transporte pesado.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Cartelera ubicada en el kilómetro 246,5 de la Ruta Nacional N° 89, en las afueras de Charata,
-    una de las ciudades más importantes de la región por su actividad agroindustrial.<br/><br/>
-    Esta ruta es vital para el movimiento económico del sudoeste chaqueño, y el punto donde se encuentra la cartelera
-    permite captar la atención de quienes ingresan y egresan de la ciudad con dirección a localidades vecinas.<br/><br/>
-    Ideal para campañas publicitarias que apunten al sector rural y comercial.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 11 Km 998</td>
-<td>8x4</td>
-<td>$185.000</td>
-<td>10.500,00</td>
-<td><button onclick="toggleDescripcion('desc-7')">Ver más</button></td>
-<tr id="desc-7" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/fDm6BXKdL2yWKM4m8" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 11, Km 998 – Resistencia, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Cartelera sobre ruta nacional de acceso a Resistencia.<br/>
-    - Tránsito intenso de vehículos particulares y transporte interprovincial.<br/>
-    - Alta exposición en corredor clave que conecta con el Puente Belgrano.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera está ubicada sobre la Ruta Nacional N° 11, en el kilómetro 998,
-    uno de los accesos principales a la ciudad de Resistencia, en dirección al Puente Interprovincial General Manuel Belgrano.<br/><br/>
-    Es una vía con tránsito intenso diario, tanto de automóviles como de transporte de carga y pasajeros entre Chaco y Corrientes.<br/><br/>
-    Excelente opción para campañas de alta visibilidad dirigidas al público interprovincial y regional que circula por uno de los puntos más neurálgicos del NEA.
-  </td>
-</tr>
-
-<tr id="desc-9" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BweoWGK7BM3Atgj2A" style="color:#ec1d81;" target="_blank">
-                Ruta Nac. 11. Km 999</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/>
-               
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Ruta Nac. 11, acceso principal desde Santa Fe, ubicado en forma estratégica de la ciudad de Resistencia, Chaco.<br/><br/>
-                Así también circunvalación que une con la ruta de Formosa y el norte del país como Salta, Tucumán, etc.<br/>
-                Característico por su afluencia del turismo, comunica con el países vecinos como Paraguay y Brasil.
-            </td>
-</tr>
-<tr id="desc-8" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 8 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BweoWGK7BM3Atgj2A" style="color:#ec1d81;" target="_blank">
-                Ruta Nac. 11. Km 999</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/>
-                - Con iluminación.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Ruta Nac. 11, acceso principal desde Santa Fe, ubicado en forma estratégica de la ciudad de Resistencia, Chaco.<br/><br/>
-                Así también circunvalación que une con la ruta de Formosa y el norte del país como Salta, Tucumán, etc.<br/>
-                Característico por su afluencia del turismo, comunica con el países vecinos como Paraguay y Brasil.
-            </td>
-</tr>
-<tr id="desc-7" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 8 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/BweoWGK7BM3Atgj2A" style="color:#ec1d81;" target="_blank">
-                Ruta Nac. 11. Km 999</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/>
-                - Con iluminación.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Ruta Nac. 11, acceso principal desde Santa Fe, ubicado en forma estratégica de la ciudad de Resistencia, Chaco.<br/><br/>
-                Así también circunvalación que une con la ruta de Formosa y el norte del país como Salta, Tucumán, etc.<br/>
-                Característico por su afluencia del turismo, comunica con el países vecinos como Paraguay y Brasil.
-            </td>
-</tr>
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 11 Km 998</td>
-<td>10x5</td>
-<td>$185.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-8')">Ver más</button></td>
-</tr>
-<tr class="disponible">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 11 Km 998</td>
-<td>10x5</td>
-<td>Consultar preci</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-9')">Ver más</button></td>
-</tr>
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 11 Km 1014 -Rcia</td>
-<td>8x4</td>
-<td>$235.000o</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-10')">Ver más</button></td>
-<tr id="desc-10" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/fxDGRzaqihrHqtHbA" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 11, Km 1014 – Resistencia, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicada sobre un tramo de alto tránsito de la Ruta 11.<br/>
-    - Excelente visibilidad para quienes ingresan o egresan de Resistencia.<br/>
-    - Zona con circulación permanente de autos, colectivos y camiones.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra en el kilómetro 1014 de la Ruta Nacional N° 11, uno de los tramos más transitados
-    por vehículos que circulan desde y hacia el centro de Resistencia.<br/><br/>
-    Es una ubicación clave para captar la atención del tráfico interprovincial, así como también de los habitantes del Gran Resistencia.<br/><br/>
-    La cartelera se encuentra en una zona con excelente exposición visual, lo que la hace ideal para campañas orientadas tanto a público urbano como a viajeros.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 11 Km 1014</td>
-<td>10x5</td>
-<td>$275.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-11')">Ver más</button></td>
-<tr id="desc-11" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/MuvswbX8dzjuyCPMA" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 11, Km 1014 – Resistencia, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación estratégica sobre corredor nacional clave.<br/>
-    - Excelente visibilidad y exposición desde ambos sentidos.<br/>
-    - Tránsito continuo de autos particulares, colectivos y camiones.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera está emplazada en la Ruta Nacional N° 11, a la altura del Km 1014,
-    en una de las salidas más transitadas de la ciudad de Resistencia.<br/><br/>
-    Su ubicación la convierte en una pieza clave para campañas de alto alcance, dirigida tanto a residentes como a tránsito interurbano
-    y logística pesada que conecta con otras provincias del NEA.<br/><br/>
-    Ideal para campañas de productos masivos, institucionales o servicios, con altísima visibilidad y recordación.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 11 Km 1014 - Rcia</td>
-<td>10x5</td>
-<td>$275.000</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-12')">Ver más</button></td>
-<tr id="desc-12" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/MuvswbX8dzjuyCPMA" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 11, Km 1014 – Resistencia, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación estratégica sobre corredor nacional clave.<br/>
-    - Excelente visibilidad y exposición desde ambos sentidos.<br/>
-    - Tránsito continuo de autos particulares, colectivos y camiones.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera está emplazada en la Ruta Nacional N° 11, a la altura del Km 1014,
-    en una de las salidas más transitadas de la ciudad de Resistencia.<br/><br/>
-    Su ubicación la convierte en una pieza clave para campañas de alto alcance, dirigida tanto a residentes como a tránsito interurbano
-    y logística pesada que conecta con otras provincias del NEA.<br/><br/>
-    Ideal para campañas de productos masivos, institucionales o servicios, con altísima visibilidad y recordación.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 11 Km 1020 (Colonia benitez)</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-13')">Ver más</button></td>
-<tr id="desc-13" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/YobaTSYciXWbD98R6" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 11, Km 1020 – Colonia Benítez, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación estratégica a pocos minutos de Resistencia.<br/>
-    - Excelente visibilidad en ambos sentidos.<br/>
-    - Tránsito constante de residentes, turistas y transporte de carga.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera está ubicada en el kilómetro 1020 de la Ruta Nacional N° 11,
-    en las inmediaciones de la localidad de Colonia Benítez, a pocos minutos de la ciudad de Resistencia.<br/><br/>
-    Es una zona de tránsito mixto, con circulación tanto de locales como de viajeros que se dirigen hacia el norte provincial o retornan a la capital.<br/><br/>
-    La cartelera tiene excelente visibilidad y está situada en un punto estratégico para campañas orientadas al público general, turistas o transporte regional.
-  </td>
-</tr>
-
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 16 Km 5 - Rcia</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-14')">Ver más</button></td>
-</tr>
-<tr id="desc-18" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
-                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
-                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
-                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
-            </td>
-</tr>
-<tr id="desc-16" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
-                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
-                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
-                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
-            </td>
-</tr>
-<tr id="desc-15" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
-                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
-                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
-                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
-            </td>
-</tr>
-<tr id="desc-14" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
-                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
-                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
-                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
-            </td>
-</tr>
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 16 Km 5 - Rcia</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-15')">Ver más</button></td>
-</tr>
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 16 Km 5 -</td>
-<td>Rcia</td>
-<td>Consultar precio</td>
-<td>Consultar precio0</td>
-<td><button onclick="toggleDescripcion('desc-16')">Ver más</button></td>
-</tr>
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 16 Km 5-</td>
-<td>Rcia</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-17')">Ver más</button></td>
-</tr>
-<tr id="desc-17" style="display:none;">
-<td colspan="6" style="text-align:left; background-color:#2a0030;">
-<strong>📏 Dimensiones:</strong> 10 x 5 mts<br/>
-<strong>📍 Dirección:</strong> <a href="https://maps.app.goo.gl/kdXSobD5w4iLpScH6" style="color:#ec1d81;" target="_blank">
-                Desde rotonda acceso a Barranqueras por autovía Nicolás Avellaneda hasta Ruta Nac. 16, Km 5</a><br/><br/>
-<strong>🧩 Características:</strong><br/>
-                - Ubicación estratégica.<br/>
-                - Insuperable relación costo-beneficio.<br/>
-                - Excelente difusión de su imagen.<br/><br/>
-<strong>ℹ️ Información:</strong><br/>
-                La misma se encuentra ubicada en la Autovía Nicolás Avellaneda, rotonda posterior al peaje, único paso que une con las provincias de Corrientes, Santa Fe, Salta, Formosa, etc. Así también conecta con la ciudad de Barranqueras, donde tiene un tránsito fluido hacia Corrientes y Resistencia.<br/><br/>
-                Conecta con el Puente Interprovincial Gral. Manuel Belgrano, que vincula con la Ruta Nacional 16, donde diariamente transitan miles de personas por razones de trabajo y estudios.<br/><br/>
-                Este acceso vincula con centros vacacionales y de fines de semana, como ser la Isla del Cerrito, en el cual cada año se realiza el Torneo Internacional de la Pesca del Dorado, en el cual acuden miles de personas de todo el país y países limítrofes.
-            </td>
-</tr>
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 16 Km 5 - Rcia</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-18')">Ver más</button></td>
-<tr id="desc-18" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/6NuVnyyFzMQJdS7L7" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 16, Km 5 – Resistencia, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación estratégica sobre uno de los principales corredores nacionales del NEA.<br/>
-    - Alta exposición por tránsito constante de autos, camiones y transporte de pasajeros.<br/>
-    - Gran visibilidad desde ambos sentidos de circulación.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra en el kilómetro 5 de la Ruta Nacional N° 16, una de las vías más importantes de acceso a Resistencia
-    y de salida hacia el interior del Chaco y el noroeste argentino.<br/><br/>
-    Por esta ruta circulan diariamente miles de vehículos, tanto de transporte local como interprovincial,
-    lo que la convierte en un punto ideal para campañas de alcance masivo.<br/><br/>
-    Excelente visibilidad y alto impacto en una zona clave para captar tanto al público urbano como al tránsito de larga distancia.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 16 Km 7 - Rcia</td>
-<td>20x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-19')">Ver más</button></td>
-<tr id="desc-19" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/kVouMd9BJa5vxtHAA" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 16, Km 7 – Resistencia, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Cartelera ubicada en una vía de alto flujo vehicular.<br/>
-    - Excelente visibilidad desde ambos sentidos de circulación.<br/>
-    - Tránsito mixto: particulares, transporte público y vehículos de carga.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra en el kilómetro 7 de la Ruta Nacional N° 16,
-    una de las principales arterias que une Resistencia con el interior de la provincia del Chaco y el noroeste del país.<br/><br/>
-    Es una ubicación estratégica para campañas de alto impacto, con exposición continua a quienes ingresan o salen de la ciudad.<br/><br/>
-    Ideal para marcas o instituciones que quieran captar la atención de un flujo constante de viajeros y locales.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 16 Km 174 - Saenz Peña</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-20')">Ver más</button></td>
-<tr id="desc-20" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/pXvfx7AUoJPbWN3m9" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 16, Km 174 – Presidencia Roque Sáenz Peña, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Cartelera en acceso principal a Sáenz Peña.<br/>
-    - Gran exposición visual en tramo urbano de la Ruta 16.<br/>
-    - Tránsito intenso de vehículos particulares, transporte interurbano y carga.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Ubicada en el kilómetro 174 de la Ruta Nacional N° 16, esta cartelera está en una de las entradas principales a la ciudad de Presidencia Roque Sáenz Peña,
-    segunda ciudad en importancia del Chaco por su desarrollo económico, industrial y educativo.<br/><br/>
-    Es un punto estratégico para campañas con alta exposición regional, ideal para marcas que apunten al centro-norte del país.<br/><br/>
-    Gran oportunidad para mensajes de alto impacto en una vía clave de conexión interprovincial.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Ruta Nacional Nro. 16 Km 174 - Saenz Peña</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-21')">Ver más</button></td>
-<tr id="desc-21" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/Em34Zp8362G97Up36" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 16, Km 174 – Presidencia Roque Sáenz Peña, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Excelente ubicación sobre acceso clave a Sáenz Peña.<br/>
-    - Alta visibilidad en tramo urbano de la Ruta 16.<br/>
-    - Tránsito constante de particulares, transporte público y camiones.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra en el Km 174 de la Ruta Nacional N° 16, en otro de los puntos de ingreso a la ciudad de Presidencia Roque Sáenz Peña.
-    Es una zona urbana de alto flujo vehicular, ideal para campañas con enfoque regional o institucional.<br/><br/>
-    Sáenz Peña es una ciudad clave del interior chaqueño, con fuerte actividad comercial y educativa, y un tránsito constante entre el norte y el centro del país.<br/><br/>
-    Ubicación estratégica para llegar a públicos diversos con campañas de gran impacto visual.
-  </td>
-</tr>
-
-<tr class="alquilada">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 16 Km 18 - Rcia</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-22')">Ver más</button></td>
-<tr id="desc-22" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/mLosvR9xZ3upwmSq6" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 16, Km 18 – Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación sobre tramo interurbano con fuerte circulación.<br/>
-    - Excelente visibilidad desde ambos sentidos.<br/>
-    - Tránsito diario de vehículos particulares, camiones y micros.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra en el kilómetro 18 de la Ruta Nacional N° 16, uno de los corredores principales del Chaco hacia el interior provincial y Santiago del Estero.<br/><br/>
-    Es un punto de paso constante para transporte de carga, vehículos interurbanos y residentes de localidades vecinas.<br/><br/>
-    Ideal para campañas de productos masivos, agroindustria o servicios con enfoque regional.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>ALQUILADA</td>
-<td>Ruta Nacional Nro. 16 Km 18 - Rcia</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-23')">Ver más</button></td>
-<tr id="desc-23" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/CgFRhcmjHSehPQTX9" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 16, Km 18 – Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Cartelera ubicada en tramo de alta circulación entre zonas urbanas y rurales.<br/>
-    - Gran visibilidad y recordación.<br/>
-    - Flujo constante de vehículos particulares y transporte comercial.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera está emplazada en otro punto del Km 18 sobre la Ruta Nacional N° 16, uno de los ejes troncales del transporte provincial.<br/><br/>
-    Perfecta para campañas que busquen captar la atención tanto de residentes locales como de vehículos en tránsito de media y larga distancia.<br/><br/>
-    Excelente punto para posicionamiento de marcas regionales o servicios logísticos.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>Posadas-Misiones - RN 12 Km 1301</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-24')">Ver más</button></td>
-<tr id="desc-24" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/jRn7mc2WAnGAKy1u9" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 12, Km 1301 – Posadas, Misiones
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicada en el principal acceso sur a Posadas.<br/>
-    - Tránsito constante de vehículos particulares y transporte interurbano.<br/>
-    - Excelente visibilidad desde ambos sentidos de la ruta.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera se encuentra sobre la Ruta Nacional N° 12 en el kilómetro 1301,
-    una de las entradas más transitadas de la ciudad de Posadas, capital de la provincia de Misiones.<br/><br/>
-    Se trata de un corredor estratégico que conecta con el interior de la provincia, Corrientes y el puente internacional a Paraguay.<br/><br/>
-    Ideal para campañas de alcance regional o nacional, en un punto de gran flujo vehicular y alta visibilidad.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>ALQUILADA</td>
-<td>Ruta 16 km 9 - Rcia</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-25')">Ver más</button></td>
-<<tr id="desc-25" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/tsxab3MMX2sqLotd7" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 16, Km 9 – Resistencia, Chaco
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Excelente visibilidad en corredor de acceso oeste a la ciudad.<br/>
-    - Flujo continuo de tránsito urbano e interurbano.<br/>
-    - Tramo clave para ingreso de logística y turismo.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera está ubicada en el kilómetro 9 de la Ruta Nacional N° 16,
-    una zona de alto tránsito que conecta directamente el oeste provincial con la ciudad de Resistencia.<br/><br/>
-    El punto es ideal para captar tanto al público que ingresa a la capital chaqueña como a quienes se dirigen hacia el interior o al noroeste argentino.<br/><br/>
-    Gran oportunidad para campañas comerciales, institucionales o de servicios de alto impacto y alcance.
-  </td>
-</tr>
-
-<tr class="disponible">
-<td>DISPONIBLE</td>
-<td>RN 12 Km 1037 (Mano izquierda)- Ctes</td>
-<td>10x5</td>
-<td>Consultar precio</td>
-<td>Consultar precio</td>
-<td><button onclick="toggleDescripcion('desc-26')">Ver más</button></td>
-<tr id="desc-26" style="display:none;">
-  <td colspan="6" style="text-align:left; background-color:#2a0030;">
-    <strong>📍 Dirección:</strong>
-    <a href="https://maps.app.goo.gl/CYS8BBsGqSv2ZhLu6" style="color:#ec1d81;" target="_blank">
-      Ruta Nacional N° 12, Km 1037 – Corrientes, Capital
-    </a><br/><br/>
-
-    <strong>🧩 Características:</strong><br/>
-    - Ubicación estratégica en el acceso sur de Corrientes.<br/>
-    - Alta exposición en corredor interprovincial.<br/>
-    - Flujo constante de vehículos particulares, transporte de carga y buses de media/larga distancia.<br/><br/>
-
-    <strong>ℹ️ Información:</strong><br/>
-    Esta cartelera está ubicada sobre la Ruta Nacional N° 12, a la altura del kilómetro 1037,
-    uno de los ingresos principales a la ciudad de Corrientes desde el sur.<br/><br/>
-    Se trata de una vía clave de conexión entre Corrientes y otras ciudades del NEA, así como con Misiones, Paraguay y Buenos Aires.<br/><br/>
-    Por su gran visibilidad y tránsito permanente, es ideal para campañas de alto impacto con enfoque comercial, institucional o turístico.
-  </td>
-</tr>
-
-</tbody>
-</table>
-</div>
-</section>
-<div class="footer">
-        Grupo Sodja © 2025
-    </div>
+    // Inicial
+    renderizarTabla(carteleras);
+  </script>
 </body>
 </html>
