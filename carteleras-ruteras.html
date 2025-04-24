@@ -227,6 +227,12 @@ function toggleDescripcion(id) {
 </script>
 <section>
 <h2>Listado de Carteleras Ruteras</h2>
+<h3>Filtrar por estado:</h3>
+<select id="filtroEstado" onchange="filtrarPorEstado()" style="padding: 10px; font-size: 16px; border-radius: 8px; margin-bottom: 20px;">
+  <option value="todas">Todas</option>
+  <option value="disponible">Disponible</option>
+  <option value="alquilada">Alquilada</option>
+</select>
 <div class="tabla-carteleras">
 <table>
 <thead>
@@ -983,6 +989,27 @@ function toggleDescripcion(id) {
 <div class="footer">
         Grupo Sodja © 2025
     </div>
+<script>
+function filtrarPorEstado() {
+  var filtro = document.getElementById("filtroEstado").value;
+  var filas = document.querySelectorAll(".tabla-carteleras tbody tr");
+
+  for (let i = 0; i < filas.length; i++) {
+    let fila = filas[i];
+
+    // Oculta todas por defecto
+    if (fila.classList.contains("disponible") || fila.classList.contains("alquilada")) {
+      let mostrar = (filtro === "todas") || (fila.classList.contains(filtro));
+      fila.style.display = mostrar ? "" : "none";
+
+      // También oculta la descripción que le sigue
+      if (filas[i+1] && filas[i+1].id?.startsWith("desc-")) {
+        filas[i+1].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
 
