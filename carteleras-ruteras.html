@@ -127,28 +127,35 @@ footer h3 {
 <h1>Carteleras Ruteras</h1>
 </header>
 <section>
-<h2>Descripción de Carteleras Ruteras</h2>
-<p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
-<p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
-<p><strong>División Publicidad en Vía Pública</strong></p>
-<h3>DESTACAMOS LA CIRCULACIÓN AUTOMOTOR:</h3>
-<p>La Ruta Nacional 11 la comunica con Buenos Aires y con la ciudad de Formosa.</p>
-<p>La Ruta Nacional 16 la enlaza con la región más importante del interior provincial, luego llega hasta la ciudad de Salta, y también forma parte de un corredor bioceánico de Brasil a Chile.</p>
-<p>La misma ruta llega hasta la cabecera del puente General Manuel Belgrano, que une a las provincias del Chaco y Corrientes, y desde allí mediante la Ruta Nacional 12 se vincula al resto de la región nordeste.</p>
-<p>El sector de esta ruta entre las intersecciones con la ruta Nacional Nº 11 y la ruta Provincial Nº 63 convertido en autovía, (concluido el tramo entre la Ruta 63 y la avenida Sarmiento); se destaca por la importancia del flujo automovilístico, convirtiendo todo ese corredor en una gran oportunidad de posicionamiento comunicacional.</p>
-</section>
+<!-- DESCRIPCIÓN DE CARTELERAS RUTERAS -->
 <section>
-<p>Bienvenido a la sección de Carteleras Ruteras de Grupo Sodja. Próximamente, encontrarás toda la información sobre nuestras ubicaciones estratégicas y tarifas.</p>
+  <h2>Descripción de Carteleras Ruteras</h2>
+  <button class="boton-principal" onclick="toggleTexto('descripcion')">Ver más</button>
+  <div id="descripcion" style="display:none; margin-top: 15px;">
+    <p>Le presentamos un servicio que va a solucionar su presencia en el medio urbano. Un equipo que le acerca soluciones a gran escala; poniéndo a su alcance un circuito expositivo de Carteleras y Marquesinas en Chaco y Corrientes.</p>
+    <p>Un circuito que abarca desde los accesos principales a cada provincia como a sus capitales, además de un circuito estratégicamente ubicado dentro del casco céntrico de Resistencia y Corrientes.</p>
+    <p><strong>División Publicidad en Vía Pública</strong></p>
+    <h3>DESTACAMOS LA CIRCULACIÓN AUTOMOTOR:</h3>
+    <p>La Ruta Nacional 11 la comunica con Buenos Aires y con la ciudad de Formosa.</p>
+    <p>La Ruta Nacional 16 la enlaza con la región más importante del interior provincial, luego llega hasta la ciudad de Salta, y también forma parte de un corredor bioceánico de Brasil a Chile.</p>
+    <p>La misma ruta llega hasta la cabecera del puente General Manuel Belgrano, que une a las provincias del Chaco y Corrientes, y desde allí mediante la Ruta Nacional 12 se vincula al resto de la región nordeste.</p>
+    <p>El sector de esta ruta entre las intersecciones con la ruta Nacional Nº 11 y la ruta Provincial Nº 63 convertido en autovía, (concluido el tramo entre la Ruta 63 y la avenida Sarmiento); se destaca por la importancia del flujo automovilístico, convirtiendo todo ese corredor en una gran oportunidad de posicionamiento comunicacional.</p>
+  </div>
 </section>
+
+<!-- VALORES Y CONTRATACIÓN -->
 <section>
-<h2>Valores y Contratación</h2>
-<ul style="line-height: 1.8;">
-<li>Contrato por 6 y 12 meses.</li>
-<li>Formas de pago: efectivo, transferencia.</li>
-<li>Incrementos trimestrales según IPC.</li>
-<li>Pago con cheque a 30 y 60 días con entrega anticipada del 100% del valor del contrato, IPC bonificado.</li>
-<li><strong>*</strong> Los valores de alquiler no incluyen impresión y colocación (consultar precio y financiación).</li>
-</ul>
+  <h2>Valores y Contratación</h2>
+  <button class="boton-principal" onclick="toggleTexto('valores')">Ver más</button>
+  <div id="valores" style="display:none; margin-top: 15px;">
+    <ul style="line-height: 1.8;">
+      <li>Contrato por 6 y 12 meses.</li>
+      <li>Formas de pago: efectivo, transferencia.</li>
+      <li>Incrementos trimestrales según IPC.</li>
+      <li>Pago con cheque a 30 y 60 días con entrega anticipada del 100% del valor del contrato, IPC bonificado.</li>
+      <li><strong>*</strong> Los valores de alquiler no incluyen impresión y colocación (consultar precio y financiación).</li>
+    </ul>
+  </div>
 </section>
 <style>
 .carteleras-img {
@@ -1010,6 +1017,21 @@ function filtrarPorEstado() {
   }
 }
 </script>
+<script>
+function toggleTexto(id) {
+  const elemento = document.getElementById(id);
+  const boton = elemento.previousElementSibling;
+
+  if (elemento.style.display === "none") {
+    elemento.style.display = "block";
+    boton.textContent = "Ver menos";
+  } else {
+    elemento.style.display = "none";
+    boton.textContent = "Ver más";
+  }
+}
+</script>
+
 </body>
 </html>
 
